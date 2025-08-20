@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  background: #181818;
+  color: #ececec;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 220px;
+  background: #212121;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 2.2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.sidebar nav li.active {
+  background: #ff6f61;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.sidebar nav li.active a {
+  color: #181818;
+}
+
+main {
+  margin-left: 235px;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section {
+  background: #222;
+  padding: 2.5rem 2.5rem;
+  border-radius: 14px;
+  max-width: 620px;
+  width: 100%;
+  box-shadow: 0 0 24px #0008;
+  animation: fadeIn 0.9s;
+}
+
+.about-section h1 {
+  color: #ff6f61;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.about-content {
+  font-size: 1.11rem;
+  color: #eee;
+  line-height: 1.7;
+}
+
+.profile-highlights {
+  list-style: disc inside;
+  margin: 1.2rem 0 1.2rem 0.5rem;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.profile-highlights li {
+  margin-bottom: 0.7rem;
+}
+
+strong {
+  color: #ff6f61;
+  font-weight: 600;
+}
+
+b {
+  color: #ff6f61;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {0%{opacity:0} 100%{opacity:1}}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    border-radius: 0;
+    padding: 1rem 0;
+  }
+  .sidebar nav ul {display: flex; flex-wrap: wrap;}
+  .sidebar nav li {margin-bottom: 0; margin: 0 0.8em;}
+  main {margin-left:0; padding: 2rem 0; justify-content:flex-start;}
+  .about-section {max-width:96%;padding:1.2rem;}
+}
